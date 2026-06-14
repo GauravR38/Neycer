@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1a57a1;
+  --color-brand-lightgray: #a6a6a6;
+  --color-brand-lightblue: #f1fdff;
+  --color-brand-darkblue: #1d4485;
+  --color-brand-deepblue: #002e66;
+  --color-brand-darkgray: #515151;
+  
+  --font-sans: 'Montserrat', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-brand-darkgray);
+  background-color: #ffffff;
+}
+
+.hero-style-tag {
+  font-family: "Style Script", cursive;
+  font-size: 52px;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.hero-heading {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+/* Infinite automated sliding marquee track */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+/* Consistent product image ratio */
+.product-image-container {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f1fdff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image-container img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+/* Custom scrollbar for horizontal categories */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

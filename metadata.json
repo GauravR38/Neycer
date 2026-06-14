@@ -1,0 +1,6 @@
+{
+  "name": "Neycer India Limited",
+  "description": "Official website of Neycer India Limited (part of Spartek Group), sanitaryware manufacturers since 1960.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
